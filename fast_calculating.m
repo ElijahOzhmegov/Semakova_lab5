@@ -67,6 +67,7 @@ th = sym('th',[1 5]);
 
 pos = symfun(pos, [th g]);
 
+clear a_sym d_sym
 clear A01 A02 A03 A04 A05 
 clear A12 A23 A34 A45
 clear th1 th2 th3 th4 th5 g
