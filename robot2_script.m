@@ -20,12 +20,20 @@ f = 2.5;
  
 syms th1 th2 th3 th4 th5 th6
 
-A01 = DHtransform(0,  0,     0,   th1);
-A12 = DHtransform(0,  pi/2,  a,   0) * DHtransform(0, 0, 0, th2);
-A23 = DHtransform(c,  0,    -b,   th3);
-A34 = DHtransform(0, -pi/2, -d,   0) * DHtransform(0, 0, e/2, th4);
-A45 = DHtransform(0,  pi/2,  e/2, 0) * DHtransform(0, 0, 0, th5);
-A56 = DHtransform(0, -pi/2,  0,   0) * DHtransform(0, 0, f, th6);
+% A01 = DHtransform(0,  0,     0,   th1);
+% A12 = DHtransform(0,  pi/2,  a,   0) * DHtransform(0, 0, 0, th2);
+% A23 = DHtransform(c,  0,    -b,   th3);
+% A34 = DHtransform(0, -pi/2, -d,   0) * DHtransform(0, 0, e/2, th4);
+% A45 = DHtransform(0,  pi/2,  e/2, 0) * DHtransform(0, 0, 0, th5);
+% A56 = DHtransform(0, -pi/2,  0,   0) * DHtransform(0, 0, f, th6);
+
+A01 = DHtransform(0,  pi/2,  a, th1);
+A12 = DHtransform(c,     0, -b, th2);
+A23 = DHtransform(0, -pi/2, -d, th3);
+A34 = DHtransform(0,  pi/2,  e, th4);
+A45 = DHtransform(0, -pi/2,  0, th5);
+A56 = DHtransform(0,  0,     f, th5);
+
 
 T01 = A01;
 T02 = T01*A12;
